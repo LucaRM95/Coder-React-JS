@@ -1,23 +1,10 @@
-import logo from './Logo-MI.png';
-import './App.css';
+import './assets/css/App.css';
+import Navbar  from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Futura página de MI indumentaria en ReactJS
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aprendé React
-        </a>
-      </header>
+        < Navbar/>
     </div>
   );
 }
