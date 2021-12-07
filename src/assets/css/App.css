@@ -13,6 +13,10 @@
   }
 }
 
+.input-group{
+  width: 35% !important;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -1,10 +1,21 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
-const CartWidget = ({ contador }) => {
+const CartWidget = ( { cant } ) => {
+
+    const [state, setState] = useState(cant);
+
+    useEffect(() => {
+        setState(cant);
+    }, [cant]);
+
     return (
-        <a className="nav-link" href="">
-            <i class="fas fa-shopping-cart"> { contador }</i>
-        </a>
+        <>
+            <div id="cart">
+                <a className="nav-link" href="">
+                    <i id="content_cart" className="fas fa-shopping-cart"> {state}</i>
+                </a>
+            </div>
+        </>
     );
 }
 
