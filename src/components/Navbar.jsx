@@ -5,11 +5,6 @@ import CartWidget from './CartWidget';
 import ItemListContainer from './ItemListContainer';
 
 const Navbar = () => {
-    
-    const addCart = () => {
-        const nav = document.querySelector("#nav");
-
-    }
 
     return (
         <>
