@@ -1,65 +1,22 @@
 import React from 'react';
 
-const Item = ({ Producto }) => {
-
-    console.log(Producto);
-
-    const [ id, title, price, imageURL ] = Producto;
+const Item = ({ item }) => {
+    
+    console.log(item)
 
     return (
-        <div id="make-3D-space">
-            <div id="product-card">
-                <div id="product-front">
-                    <div class="shadow"></div>
-                    <img src={ imageURL } alt="" />
-                    <div class="image_overlay"></div>
-                    <div id="view_details">View details</div>
-                    <div class="stats">        	
-                        <div class="stats-container">
-                            <span class="product_price">{ price }</span>
-                            <span class="product_name">{ id }</span>    
-                            <p>{ title }</p>                                            
-                            
-                            <div class="product-options">
-                            <strong>SIZES</strong>
-                            <span>XS, S, M, L, XL, XXL</span>
-                            <strong>COLORS</strong>
-                            <div class="colors">
-                                <div class="c-blue"><span></span></div>
-                                <div class="c-red"><span></span></div>
-                                <div class="c-white"><span></span></div>
-                                <div class="c-green"><span></span></div>
-                            </div>
-                        </div>                       
-                        </div>                         
+        <div className="container">
+            <div className="row">
+                <div className="card col-md-8" style={{width: 18+"rem"}}>
+                    <img className="card-img-top" src="imageURL" alt="Card image cap" />
+                    <div className="card-body">
+                        <h5 className="card-title">Card title</h5>
+                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" className="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-                <div id="product-back">
-                    <div class="shadow"></div>
-                    <div id="carousel">
-                        <ul>
-                            <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large.png" alt="" /></li>
-                            <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large2.png" alt="" /></li>
-                            <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large3.png" alt="" /></li>
-                        </ul>
-                        <div class="arrows-perspective">
-                            <div class="carouselPrev">
-                                <div class="y"></div>
-                                <div class="x"></div>
-                            </div>
-                            <div class="carouselNext">
-                                <div class="y"></div>
-                                <div class="x"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="flip-back">
-                        <div id="cy"></div>
-                        <div id="cx"></div>
-                    </div>
-                </div>	  
-            </div>	
-        </div>	
+            </div>
+        </div>
     );
 }
 

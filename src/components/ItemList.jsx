@@ -1,35 +1,36 @@
-import React from 'react';
-import Item from './Item';
+import React from "react";
+import Item from "./Item";
 
-const ItemList = ( { items } ) => {
+const ItemList = ( { items } ) => { 
 
-    new Promise((resolve, reject) => {
-
+    const data = new Promise((resolve, reject) => {
+        
         if ( items !== undefined){
 
-            items.map( item => resolve( item ) );
+            resolve( items );
 
         }else{
             reject("Hubo un problema al cargar los productos. Intentalo más tarde!");
         }
     })
-    .then( item => {
+    data.then( items => {
 
-        return (
-            <Item Producto = {item}/>
-        )
+        const item = items.map( item => {
+            return item;
+        })
 
+        return item;
     })
-    .catch( err => {
-        return(
-            <strong>{ err }</strong>
-        )
+    data.catch( err => {
+        return err; 
     })
+    
+    console.log(data)
 
-    return(
+    return (
         <>
-            <hr />
-            <h2>Lista de productos</h2>
+            <strong>Hola</strong>
+            <Item item = { data }/>
         </>
     )
 }

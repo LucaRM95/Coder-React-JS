@@ -1,5 +1,4 @@
 import Logo from '../assets/img/Logo-MI.png';
-
 import React from 'react';
 import CartWidget from './CartWidget';
 import ItemListContainer from './ItemListContainer';
