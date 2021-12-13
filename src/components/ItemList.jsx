@@ -7,13 +7,15 @@ const ItemList = ( { items } ) => {
 
     const data = new Promise((resolve, reject) => {
         
-        if ( items !== undefined){
-
-            resolve( items );
-
-        }else{
-            reject("Hubo un problema al cargar los productos. Intentalo más tarde!");
-        }
+        setTimeout(() => {
+            if ( items !== undefined){
+    
+                resolve( items );
+    
+            }else{
+                reject("Hubo un problema al cargar los productos. Intentalo más tarde!");
+            }
+        }, 2000);
     })
     data.then( data => {
         setListItem(data);
@@ -23,10 +25,11 @@ const ItemList = ( { items } ) => {
     })
 
     return (
-        <>
-            <strong>Hola</strong>
-            <Item items = { listItem }/>
-        </>
+        <div className="container">
+            <div className="row">
+                <Item items = { listItem }/>
+            </div>
+        </div>    
     )
 }
 
