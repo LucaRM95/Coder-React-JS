@@ -3,7 +3,7 @@ import Item from "./Item";
 
 const ItemList = ( { items } ) => { 
 
-    let [state, setState] = useState([]);
+    let [listItem, setListItem] = useState([]);
 
     const data = new Promise((resolve, reject) => {
         
@@ -16,17 +16,16 @@ const ItemList = ( { items } ) => {
         }
     })
     data.then( data => {
-
-        setState(data);
+        setListItem(data);
     })
     data.catch( err => {
-        return err; 
+        console.warn(err); 
     })
 
     return (
         <>
             <strong>Hola</strong>
-            <Item items = { state }/>
+            <Item items = { listItem }/>
         </>
     )
 }
