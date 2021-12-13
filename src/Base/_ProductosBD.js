@@ -1,21 +1,24 @@
 const Productos = [
     {
-        price: 39,
-        id: "Adidas Originals",
-        title: "Men's running shirt",
-        imageURL: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png"
+        key: 1,
+        price: 30,
+        id: "MI-Developer",
+        title: "Web developer shirts",
+        imageURL: "../assets/img/WebDeveloperIndumentarie.jpg"
     },
     {
-        price: 39,
-        id: "Adidas Originals",
-        title: "Men's running shirt",
-        imageURL: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png"
+        key: 2,
+        price: 25,
+        id: "MI-Cartoons",
+        title: "Cartoons shirts",
+        imageURL: "../assets/img/MI_Indumentaria.jpg"
     },
     {
+        key: 3,
         price: 39,
-        id: "Adidas Originals",
-        title: "Men's running shirt",
-        imageURL: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png"
+        id: "MI-Gaming",
+        title: "Gaming shirts",
+        imageURL: "../assets/img/gaming-img.png"
     }
 ]
 

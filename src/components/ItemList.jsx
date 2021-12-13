@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Item from "./Item";
 
 const ItemList = ( { items } ) => { 
+
+    let [state, setState] = useState([]);
 
     const data = new Promise((resolve, reject) => {
         
@@ -15,22 +17,16 @@ const ItemList = ( { items } ) => {
     })
     data.then( items => {
 
-        const item = items.map( item => {
-            return item;
-        })
-
-        return item;
+        setState(state = items);
     })
     data.catch( err => {
         return err; 
     })
-    
-    console.log(data)
 
     return (
         <>
             <strong>Hola</strong>
-            <Item item = { data }/>
+            <Item items = { state }/>
         </>
     )
 }
