@@ -15,9 +15,9 @@ const ItemList = ( { items } ) => {
             reject("Hubo un problema al cargar los productos. Intentalo más tarde!");
         }
     })
-    data.then( items => {
+    data.then( data => {
 
-        setState(state = items);
+        setState(data);
     })
     data.catch( err => {
         return err; 

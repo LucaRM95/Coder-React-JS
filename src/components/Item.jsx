@@ -2,6 +2,8 @@ import React from 'react';
 
 const Item = ({ items }) => {
     
+    console.log(items)
+
     return (
         items.map(item => {
             return(
