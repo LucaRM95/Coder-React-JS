@@ -23,6 +23,27 @@ const Productos = [
         id: "MI-Gaming",
         title: "Gaming shirts",
         imageURL: MIgaming
+    },
+    {
+        key: 3,
+        price: 39,
+        id: "MI-Gaming",
+        title: "Gaming shirts",
+        imageURL: MIgaming
+    },
+    {
+        key: 3,
+        price: 39,
+        id: "MI-Gaming",
+        title: "Gaming shirts",
+        imageURL: MIgaming
+    },
+    {
+        key: 3,
+        price: 39,
+        id: "MI-Gaming",
+        title: "Gaming shirts",
+        imageURL: MIgaming
     }
 ]
 

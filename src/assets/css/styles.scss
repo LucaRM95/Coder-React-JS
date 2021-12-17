@@ -1,0 +1,11 @@
+.detail-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    p{
+        font-size: 1.2rem;
+    }
+}
