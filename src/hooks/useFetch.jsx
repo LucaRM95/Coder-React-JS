@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import getItem from '../helpers/getItem';
 
-const useFetch = () => {
+const useFetch = ( categoria="remeras-skate" ) => {
 
     const [item, setItem] = useState({
         data: [],
@@ -9,7 +9,7 @@ const useFetch = () => {
     });
 
     useEffect(() => {
-        getItem()
+        getItem( categoria )
             .then( productos => {
                 setItem({
                     data: productos,
@@ -19,7 +19,7 @@ const useFetch = () => {
             .catch( () => {
                 alert("Hubo un problema al realizar la busqueda");
             })
-    }, [])
+    }, [categoria])
 
     return item;
 }

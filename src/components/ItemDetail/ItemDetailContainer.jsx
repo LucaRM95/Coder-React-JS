@@ -5,9 +5,9 @@ import ItemDetail from './ItemDetail';
 
 const ItemDetailContainer = () => {
 
-    const { data } = useFetch();  
-    
-    while(data[0] === undefined){
+    const { data, loading } = useFetch();  
+
+    while(loading){
         return(<p>Cargando...</p>);
     }
 

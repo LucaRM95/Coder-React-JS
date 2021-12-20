@@ -15,8 +15,8 @@ const ItemDetail = ({ item }) => {
                     </div>
                     <div className="detail-body col">
                         <h2 className='mb-5'>{item[0].title}</h2>
-                        <p className='mb-5'>Stock disponible: {item[0].stock}</p>
-                        <p className='mb-5'>Precio: ${item[0].price} (Unidades)</p>
+                        <p className='mb-5'>Stock disponible: {item[0].stock} (Unidades)</p>
+                        <p className='mb-5'>Precio: ${item[0].price}</p>
                         <p className='mb-5'>Todos los talles disponibles</p>
                         <button className="btn btn-outline-primary">Comprar</button>
                     </div>

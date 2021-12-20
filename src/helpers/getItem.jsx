@@ -1,12 +1,10 @@
 
-const getItem = async () => {
+const getItem = async ( categoria ) => {
     
-    const url = "https://api.mercadolibre.com/sites/MLA/search?q=remera";
+    const url = `https://api.mercadolibre.com/sites/MLA/search?q=${categoria}`;
     const resp = await fetch( url );
     const { results } = await resp.json();
 
-    console.log(results)
-    
     const item  = results.map(product => {
         return{
             id: product.id,

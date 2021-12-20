@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
 const CartWidget = ( { cant } ) => {
 
@@ -11,9 +12,9 @@ const CartWidget = ( { cant } ) => {
     return (
         <>
             <div id="cart">
-                <a className="nav-link" href="">
+                <Link className="nav-link" to="#">
                     <i id="content_cart" className="fas fa-shopping-cart"> {state}</i>
-                </a>
+                </Link>
             </div>
         </>
     );
