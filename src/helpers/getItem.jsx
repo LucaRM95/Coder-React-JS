@@ -9,7 +9,7 @@ const getItem = async ( categoria ) => {
         return{
             id: product.id,
             title: product.title,
-            price: product.original_price,
+            price: product.price,
             stock: product.sold_quantity,
             url: product.thumbnail
         } 

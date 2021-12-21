@@ -2,9 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import Item from './Item';
-import ItemCount from './ItemCount';
 
-const ItemListContainer = ({ marginTop }) => {
+const ItemListContainer = () => {
     let Categoria = useParams();
 
     const Productos = useFetch( Categoria.id );
@@ -19,12 +18,10 @@ const ItemListContainer = ({ marginTop }) => {
 
     return (
         <>
-            <section className={ marginTop }>
-                <ItemCount stock={5} initial={1}/>
-                <hr />
+            <section className="mt-5">
                 <h2>Lista de productos</h2>
                 <div className="container">
-                    <div className="row">
+                    <div className="row justify-content-center">
                         <Item items = { Productos }/>
                     </div>
                 </div>    

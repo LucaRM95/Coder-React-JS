@@ -24,8 +24,7 @@ import React, { useState } from 'react';
 	
 	    return (
 	        <>
-	            <h3 className="mt-5">Items a agregar al carrito</h3>
-	            <div className="container input-group mt-5">
+	            <div className="container input-group">
 	                <button 
 	                    type="button" 
 	                    className="btn btn-outline-success"
@@ -38,8 +37,7 @@ import React, { useState } from 'react';
 	                <input 
 	                    id="cartInput"
 	                    type="text" 
-	                    className="form-control" 
-	                    aria-label="Text input with segmented dropdown button" 
+	                    className="form-control"  
 	                    disabled 
 	                    value={state}
 	                />
@@ -57,7 +55,7 @@ import React, { useState } from 'react';
 	            </div>
 	            <button 
 	                type="button" 
-	                className="btn btn-outline-primary mt-5"
+	                className="btn btn-outline-primary mt-5 mb-5"
 	                onClick = { onAdd }
 	            >
 	                Agregar al carrito
