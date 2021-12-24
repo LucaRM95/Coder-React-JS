@@ -12,7 +12,7 @@ const CartWidget = ( { cant } ) => {
     return (
         <>
             <div id="cart">
-                <Link className="nav-link" to="#">
+                <Link className="nav-link" to="/carrito">
                     <i id="content_cart" className="fas fa-shopping-cart"> {state}</i>
                 </Link>
             </div>

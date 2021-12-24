@@ -8,24 +8,24 @@ const ItemListContainer = () => {
 
     const Productos = useFetch( Categoria.id );
 
-    while(Productos.loading){
-        return(
-            <div>
-                <h4>Cargando...</h4>
-            </div>
-        )
-    }
-
     return (
         <>
-            <section className="mt-5">
-                <h2>Lista de productos</h2>
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <Item items = { Productos }/>
-                    </div>
-                </div>    
-            </section>
+            {
+                Productos.loading
+                ?
+                <div>
+                    <h4>Cargando...</h4>
+                </div>
+                :
+                <section className="mt-5">
+                    <h2>Lista de productos</h2>
+                    <div className="container">
+                        <div className="row justify-content-center">
+                            <Item items = { Productos }/>
+                        </div>
+                    </div>    
+                </section>
+            }
         </>
     );
 }
