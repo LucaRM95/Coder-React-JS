@@ -17,8 +17,6 @@ const ItemDetail = ({ item }) => {
         useEffect(() => {
             setQuantity(quantity = state); 
         }, [state]);
-
-        <CartDetail quant={quantity}/>
     }
     
     console.log(quantity)
