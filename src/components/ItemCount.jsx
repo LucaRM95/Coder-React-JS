@@ -7,18 +7,18 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 	const [state, setState] = useState(initial);
 
 	const handleAdd = () => {
+
 		if(state < stock){
 			setState(state + 1);
 		}
 	}
 
 	const handleSubstract = () => {
+
 		if(state > initial){
 			setState(state - 1);
 		}
-	}
-
-	
+	}	
 
 	return (
 		<>
@@ -54,7 +54,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 			<Link 
 				to="/carrito" 
 				className="btn btn-outline-primary mt-5 mb-5"
-				onClick = { onAdd( state ) }
+				onClick = {onAdd(state)}
 			>
 				Agregar al carrito
 			</Link>

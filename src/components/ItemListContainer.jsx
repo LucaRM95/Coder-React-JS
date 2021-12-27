@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import Item from './Item';
+import Spinner from './spinner/Spinner';
 
 const ItemListContainer = () => {
     let Categoria = useParams();
@@ -13,9 +14,7 @@ const ItemListContainer = () => {
             {
                 Productos.loading
                 ?
-                <div>
-                    <h4>Cargando...</h4>
-                </div>
+                <Spinner />
                 :
                 <section className="mt-5">
                     <h2>Lista de productos</h2>

@@ -1,34 +1,40 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import '../../assets/css/styles.css';
 import CartDetail from '../CartDetail';
-//import CartContext from '../Context/CartContext';
+import CartContext from '../Context/CartContext';
 import ItemCount from '../ItemCount';
+import Spinner from '../spinner/Spinner';
 
 const ItemDetail = ({ item }) => {
 
-    let [quantity, setQuantity] = useState(1);
-    //const cartContext = useContext(CartContext)
+    const product = {
+        id: item.id,
+        img: item.url,
+        title: item.title,
+        price: item.price,
+        quantity: 1,
+    }
 
-    // console.log("cartContext", cartContext)
-    // console.log(item)
+    const cartContext = useContext(CartContext);
 
     const OnAdd =  ( state ) => {
-        useEffect(() => {
-            setQuantity(quantity = state); 
-        }, [state]);
+        
+        product.quantity = state;
+        
+        console.log(product)
+
+        //cartContext.addItem( product );
     }
     
-    console.log(quantity)
-
+    console.log(item)
+    
     return (
         <>
             {
                 (item === undefined)
                 ?
-                <div>
-                    <h1>Cargando...</h1>
-                </div>
+                <Spinner />
                 :
                 <div className='container-fluid mt-5'>
                     <h1>Detalles de producto</h1>
