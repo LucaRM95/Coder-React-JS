@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/App.css';	
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd, item }) => {
 
 	const [state, setState] = useState(initial);
 
@@ -54,7 +54,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 			<Link 
 				to="/carrito" 
 				className="btn btn-outline-primary mt-5 mb-5"
-				onClick = {onAdd(state)}
+				onClick = {onAdd(item, state)}
 			>
 				Agregar al carrito
 			</Link>

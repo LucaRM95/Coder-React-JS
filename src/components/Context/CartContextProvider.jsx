@@ -9,10 +9,14 @@ const CartContextProvider = ({ defaultValue=[], children }) => {
         return cart.find( item => item.id === itemId );
     }
 
-    const addItem = (item) => {
-        setCart(cart.push(item));
+    const addItem = (item, quantity) => {
 
-        console.log(cart);
+        let aux = item;
+        aux.quantity = quantity;
+        
+        //setCart(cart.push(aux));
+
+        console.log(aux);
     }
 
     const removeItem = (itemId) => {
