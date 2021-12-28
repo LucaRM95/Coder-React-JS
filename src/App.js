@@ -7,7 +7,7 @@ import CartContextProvider from './components/Context/CartContextProvider';
 
 function App() {
   return (
-    <CartContextProvider value="algo">
+    <CartContextProvider>
       <BrowserRouter>
         <div className="App">
           <Navbar />

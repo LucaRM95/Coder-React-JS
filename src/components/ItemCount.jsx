@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/App.css';	
+import CartContext from './Context/CartContext';
 
-const ItemCount = ({ stock, initial, onAdd, item }) => {
+const ItemCount = ({ stock, initial, /*onAdd*/ item }) => {
 
 	const [state, setState] = useState(initial);
+	const cartContext = useContext(CartContext);
 
 	const handleAdd = () => {
 
@@ -19,6 +21,12 @@ const ItemCount = ({ stock, initial, onAdd, item }) => {
 			setState(state - 1);
 		}
 	}	
+
+	const onAdd = () => {
+
+		cartContext.addItem(item, state);
+
+	}
 
 	return (
 		<>
@@ -54,7 +62,7 @@ const ItemCount = ({ stock, initial, onAdd, item }) => {
 			<Link 
 				to="/carrito" 
 				className="btn btn-outline-primary mt-5 mb-5"
-				onClick = {onAdd(item, state)}
+				onClick = { onAdd }
 			>
 				Agregar al carrito
 			</Link>

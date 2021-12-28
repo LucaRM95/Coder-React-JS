@@ -1,21 +1,9 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import '../../assets/css/styles.css';
-import CartContext from '../Context/CartContext';
 import ItemCount from '../ItemCount';
 import Spinner from '../spinner/Spinner';
 
 const ItemDetail = ({ item }) => {
-
-    const cartContext = useContext(CartContext);
-
-    // const OnAdd =  ( state ) => {
-        
-    //     product.quantity = state;
-        
-    //     console.log(product)
-
-    //     //cartContext.addItem( product );
-    // }
     
     return (
         <>
@@ -38,7 +26,7 @@ const ItemDetail = ({ item }) => {
                                 <p className='mb-5'>Stock disponible: {item.stock} (Unidades)</p>
                                 <p className='mb-5'>Precio: ${item.price}</p>
                                 <p className='mb-5'>Todos los talles disponibles</p>
-                                <ItemCount stock={item.stock} initial={1} onAdd={ cartContext.addItem } item={item}/>
+                                <ItemCount stock={item.stock} initial={1} /*onAdd={ cartContext.addItem }*/ item={item}/>
                             </div>
                         </div>
                     </div>
