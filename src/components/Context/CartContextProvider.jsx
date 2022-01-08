@@ -1,12 +1,16 @@
 import { useState } from 'react';
+//import LocalStorage from '../../localStorage/LocalStorage';
 import CartContext from './CartContext';
 
 const CartContextProvider = ({ children }) => {
 
-    const [cart, setCart] = useState([]);
+    const storage = JSON.parse(localStorage.getItem("items"));
+    let [cart, setCart] = useState(storage);
+
+    console.log(cart)
 
     const getItem = (itemId) => {
-        return cart.find( item => item.id === itemId );
+        return cart.find( item => item.id === itemId);
     }
 
     const isInCart = (id) => {
@@ -15,15 +19,19 @@ const CartContextProvider = ({ children }) => {
 
     const addItem = (item, quantity) => {
 
-        let aux = item;
-        aux.quantity = quantity;
+        item.quantity = quantity;
+        
+        if(storage === null){
+            setCart(cart = []);
+        } 
 
         if(isInCart(item && item.id)){
             return console.log("Wont add existing item to cart");
         }
-        setCart([...cart, aux]);
 
-        console.log(cart)
+        setCart(cart = [...cart, item])
+
+        localStorage.setItem("items", JSON.stringify(cart));
     }
 
     const removeItem = (itemId) => {
@@ -32,6 +40,7 @@ const CartContextProvider = ({ children }) => {
 
     const clear = () => {
         setCart([])
+        localStorage.clear()
     }
 
 

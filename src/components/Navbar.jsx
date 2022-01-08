@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import Logo from '../assets/img/Logo-MI.png';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import CartWidget from './CartWidget';
 
 const Navbar = () => {
+
+    const cart = JSON.parse(localStorage.getItem("items"));
 
     return (
         <>
@@ -23,7 +25,7 @@ const Navbar = () => {
                             <Link className="nav-link" to="./musculosas">Musculosas</Link>
                             <Link className="nav-link" to="./remeras-mujer">Mujeres</Link>
                             <Link className="nav-link" to="./remeras-hombre">Hombres</Link>
-                            <CartWidget cant=""/>
+                            <CartWidget cant={cart}/>
                         </div>
                     </div>
                 </div>

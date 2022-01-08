@@ -22,3 +22,16 @@ const AppRouter = () => {
 }
 
 export default AppRouter;
+
+/*
+
+    if(){
+
+    }
+
+    (condicion === condicion2) ? resultado true : false
+
+    funcion(item && item.id)
+
+    
+*/
