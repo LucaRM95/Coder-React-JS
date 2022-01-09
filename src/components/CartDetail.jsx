@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import CartContext from './Context/CartContext';
 
 const CartDetail = () => {
@@ -10,9 +10,12 @@ const CartDetail = () => {
     const handleClickDeleteItem = ( e ) => {
 
         const deleteItem = e.target.parentNode.parentNode.parentNode;
+        const selectedItem = items.find( item => item.id === deleteItem.id );
         const newArray = items.filter( item => item.id !== deleteItem.id );
 
-        totalPrice = 
+        console.log(selectedItem)
+
+        totalPrice = totalPrice - (selectedItem.price * selectedItem.quantity);
 
         localStorage.setItem("items", JSON.stringify(newArray));
 
@@ -50,7 +53,7 @@ const CartDetail = () => {
             {
                 items.map( item => {
 
-                    totalPrice += item.price;
+                    totalPrice += item.price * item.quantity;
 
                     return (
                         <div key={item.id} id={item.id} className="container">
