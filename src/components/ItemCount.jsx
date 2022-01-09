@@ -24,6 +24,7 @@ const ItemCount = ({ stock, initial, item }) => {
 
 	const onAdd = () => {
 
+		alert("Item agregado al carrito!");
 		cartContext.addItem(item, state);
 
 	}

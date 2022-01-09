@@ -1,6 +1,6 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/img/Logo-MI.png';
-import React, { useEffect, useState } from 'react';
 
 import CartWidget from './CartWidget';
 

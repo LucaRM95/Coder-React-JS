@@ -10,7 +10,11 @@ const CartContextProvider = ({ children }) => {
     const cartCountFunc = () => {
 
         let contAdd = 0
-
+        
+        if(storage === null){
+            return contAdd;
+        }
+        
         storage.map(item => contAdd += item.quantity );
 
         return contAdd;
