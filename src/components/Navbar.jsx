@@ -6,8 +6,6 @@ import CartWidget from './CartWidget';
 
 const Navbar = () => {
 
-    const cart = JSON.parse(localStorage.getItem("items"));
-
     return (
         <>
             <header className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,7 +23,7 @@ const Navbar = () => {
                             <Link className="nav-link" to="./musculosas">Musculosas</Link>
                             <Link className="nav-link" to="./remeras-mujer">Mujeres</Link>
                             <Link className="nav-link" to="./remeras-hombre">Hombres</Link>
-                            <CartWidget cant={cart}/>
+                            <CartWidget />
                         </div>
                     </div>
                 </div>

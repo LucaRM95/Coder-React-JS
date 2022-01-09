@@ -1,22 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
+import CartContext from './Context/CartContext';
 
-const CartWidget = ({ cant }) => {
+const CartWidget = () => {
 
-    let [count, setCount] = useState(0)
-    let suma = 0;
+    const cartContext = useContext(CartContext);
 
-    if(cant !== null){
-        cant.map(q => {
-            suma += parseInt(q.quantity)
-        })
-    }
-    useEffect(() => {
-        
-        setCount(suma)
-    
-        console.log(suma)
-    }, [cant])
+    const count = cartContext.cartCountFunc();
 
     return (
         <>

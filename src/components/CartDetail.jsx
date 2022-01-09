@@ -8,18 +8,9 @@ const CartDetail = () => {
     let totalPrice = 0;
 
     const handleClickDeleteItem = ( e ) => {
-
         const deleteItem = e.target.parentNode.parentNode.parentNode;
-        const selectedItem = items.find( item => item.id === deleteItem.id );
-        const newArray = items.filter( item => item.id !== deleteItem.id );
 
-        console.log(selectedItem)
-
-        totalPrice = totalPrice - (selectedItem.price * selectedItem.quantity);
-
-        localStorage.setItem("items", JSON.stringify(newArray));
-
-        deleteItem.remove();
+        cartContext.removeItem(deleteItem.id);
     }
 
     const handleClickClear = () => {

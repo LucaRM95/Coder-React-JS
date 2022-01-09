@@ -6,8 +6,18 @@ const CartContextProvider = ({ children }) => {
 
     const storage = JSON.parse(localStorage.getItem("items"));
     let [cart, setCart] = useState(storage);
+    let [cartCount, setCartCount] = useState(0);
 
-    console.log(cart)
+    const cartCountFunc = () => {
+
+        let contAdd = 0
+
+        storage.map(item => contAdd += item.quantity );
+
+        setCartCount(cartCount = contAdd);
+
+        return cartCount;
+    }
 
     const getItem = (itemId) => {
         return cart.find( item => item.id === itemId);
@@ -36,6 +46,11 @@ const CartContextProvider = ({ children }) => {
 
     const removeItem = (itemId) => {
         
+        const newItems = storage.filter( item => item.id !== itemId );
+
+        setCart(newItems);
+
+        localStorage.setItem("items", JSON.stringify(newItems));
     }
 
     const clear = () => {
@@ -45,7 +60,7 @@ const CartContextProvider = ({ children }) => {
 
 
     return(
-        <CartContext.Provider value={{ addItem, removeItem, clear, isInCart }}>
+        <CartContext.Provider value={{ addItem, removeItem, clear, isInCart, cartCountFunc }}>
             {children}
         </CartContext.Provider>
     )
