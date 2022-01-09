@@ -6,7 +6,6 @@ const CartContextProvider = ({ children }) => {
 
     const storage = JSON.parse(localStorage.getItem("items"));
     let [cart, setCart] = useState(storage);
-    let [cartCount, setCartCount] = useState(0);
 
     const cartCountFunc = () => {
 
@@ -14,9 +13,7 @@ const CartContextProvider = ({ children }) => {
 
         storage.map(item => contAdd += item.quantity );
 
-        setCartCount(cartCount = contAdd);
-
-        return cartCount;
+        return contAdd;
     }
 
     const getItem = (itemId) => {

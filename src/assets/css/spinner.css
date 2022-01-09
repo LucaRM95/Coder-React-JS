@@ -30,8 +30,8 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(33, 37, 41, 0.5);
     height: 100vh;
-    background-color: rgba(204, 204, 204);
 }
 
 .spinner .background {

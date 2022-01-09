@@ -1,12 +1,17 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import CartContext from './Context/CartContext';
 
 const CartWidget = () => {
 
+    let [cartCount, setCartCount] = useState(0);
     const cartContext = useContext(CartContext);
 
     const count = cartContext.cartCountFunc();
+
+    useEffect(() => {
+        setCartCount(cartCount = count);
+    }, [])
 
     return (
         <>
