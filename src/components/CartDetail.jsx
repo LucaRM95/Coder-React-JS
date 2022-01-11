@@ -50,7 +50,7 @@ const CartDetail = () => {
                         <div key={item.id} id={item.id} className="container">
                             <div className="row mt-5 align-items-md-center">
                                 <div className="col-md-4">
-                                    <img src={item.url} 
+                                    <img src={item.image} 
                                     style={{width: 50+"%"}} 
                                     alt="algo" />
                                 </div>

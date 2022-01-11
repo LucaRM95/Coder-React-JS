@@ -19,7 +19,7 @@ const ItemDetail = ({ item }) => {
                     <div className='container'>
                         <div className="row mt-5">
                             <div className="col-md-6">
-                                <img src={item.url} alt="" /> 
+                                <img src={item.image} alt="" /> 
                             </div>
                             <div className="detail-body col-md-6">
                                 <h2 className='mt-5 mb-5'>{item.title}</h2>

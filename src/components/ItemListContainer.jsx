@@ -1,13 +1,14 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import useFetch from '../hooks/useFetch';
+//import useFetch from '../hooks/useFetch';
+import useFireBase from '../hooks/useFireBase';
 import Item from './Item';
 import Spinner from './spinner/Spinner';
 
 const ItemListContainer = () => {
     let Categoria = useParams();
 
-    const Productos = useFetch( Categoria.id );
+    const Productos = useFireBase(Categoria.id);
 
     return (
         <>
