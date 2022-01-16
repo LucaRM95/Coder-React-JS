@@ -20,6 +20,10 @@
   font-size: 1.2rem;
 }
 
+.empty-cart {
+  height: 40rem;
+}
+
 footer {
   color: white;
 }

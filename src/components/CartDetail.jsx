@@ -25,7 +25,7 @@ const CartDetail = () => {
 
     if(items === null || items.length === 0){
         return (
-            <div className='container' styles={{height: 40+"rem"}}>
+            <div className='empty-cart container'>
                 <div className="row mt-5">
                     <div className="col-md-12">
                         <h2>No hay productos en el carrito</h2>
