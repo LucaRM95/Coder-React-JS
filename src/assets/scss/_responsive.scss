@@ -1,0 +1,206 @@
+@media (max-width: 1240px){
+    .seccion-principal{
+        .titulo{
+            h1{
+                font-size: 5rem;
+            }
+        }
+        form{
+            width: 50%;
+            input{
+                height: 3rem;
+                &[placeholder]{
+                    font-size: 1.5rem;
+                }
+            }
+            .form-check-input{
+                width: 1.2em !important;
+                height: 1.2em !important;
+            }
+            .form-check-label{
+                padding-left: 1rem;
+                font-size: 1.5rem;
+            }
+            .form-check{
+                display: flex;
+                align-items: center;
+            }
+            .form-input{
+                width: 100%;
+            }
+            
+            #consulta{
+                width: 100%;
+            }
+            .form-button{
+                display: flex;
+                justify-content: flex-end;
+            }        
+        }
+        input{
+            height: 35px;
+            border: none;
+            border-radius: 2px;
+        }
+    }
+    .seccion-cita{
+        &__texto{
+            h1{
+               font-size: 3rem;
+            }
+            span{
+                font-size: 1.2rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1060px){
+    .padd-lat{
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+    }
+
+    .seccion-secundaria{
+        h1{
+            font-size: 3rem;
+        }
+    }
+}
+
+@media (max-width: 920px){
+    .padd-lat{
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+    }
+
+    .seccion-principal{
+        .titulo{
+            h1{
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 780px){
+    .seccion-cita{
+        &__imagen{
+            padding-bottom: 10rem;
+            img{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .padd-lat{
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+    }
+
+    .btn-light{
+        font-size: 1rem;
+    }
+    
+    .btn-warning{
+        font-size: 1rem;  
+    }
+    
+    .btn-success{
+        font-size: 1rem;
+    }
+    .seccion-principal{
+        .logo{
+            img{
+                width: 120px;
+            }
+        }
+        .titulo{
+            h1{
+                font-size: 3.3rem;
+            }
+            h4{
+                font-size: 1.3rem;
+            }
+        }
+        form{
+            width: 100%;
+            .form-check-input{
+                width: 1.5em !important;
+                height: 1.2em !important;
+            }
+            .form-check-label{
+                padding-left: 1rem;
+                font-size: 1rem;
+            }
+            .form-button{
+                justify-content: center;
+            }
+        }
+    }
+    .fondo-flot {
+        .flotantes {
+            width: 145px;
+            height: 200px;
+            p {
+                padding: 20px;
+                font-size: 1rem; 
+            } 
+        }
+    }
+    .fondo-flot-aux {
+        .flotantes {
+            width: 235px;
+            height: 265px;
+            p {
+                padding: 20px;
+                font-size: 1rem; 
+            } 
+        }
+    }
+    .seccion-secundaria{
+        height: auto;
+        h1{
+            font-size: 2rem;
+            width: 100%;
+        }
+        h4{
+            font-size: .7rem;
+        }
+        p{
+            font-size: .7rem;
+        }
+        .contenedor{
+            &__parrafos{
+                padding: 0px;
+            }
+        }
+    }
+    .seccion-cita{
+        &__texto{
+            h1{
+               font-size: 2rem;
+            }
+            span{
+                font-size: 1rem;
+            }
+            p{
+                font-size: .7rem;
+            }
+        }
+        &__imagen{
+            padding-bottom: 5rem;
+            img{
+                width: 85%;
+            }
+        }
+        &__btn{
+            justify-content: center;
+        }
+    }
+}

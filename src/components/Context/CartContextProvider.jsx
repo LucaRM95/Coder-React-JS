@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import addToFireBase from '../../helpers/addToFireBase';
 //import LocalStorage from '../../localStorage/LocalStorage';
 import CartContext from './CartContext';
 
@@ -40,7 +41,9 @@ const CartContextProvider = ({ children }) => {
             return console.log("Wont add existing item to cart");
         }
 
-        setCart(cart = [...cart, item])
+        setCart(cart = [...cart, item]);
+
+        console.log(cart)
 
         localStorage.setItem("items", JSON.stringify(cart));
     }
@@ -54,6 +57,10 @@ const CartContextProvider = ({ children }) => {
         localStorage.setItem("items", JSON.stringify(newItems));
     }
 
+    const createOrder = () => {
+        addToFireBase(cart)
+    }
+
     const clear = () => {
         setCart([])
         localStorage.clear()
@@ -61,7 +68,7 @@ const CartContextProvider = ({ children }) => {
 
 
     return(
-        <CartContext.Provider value={{ addItem, removeItem, clear, isInCart, cartCountFunc }}>
+        <CartContext.Provider value={{ addItem, removeItem, clear, isInCart, cartCountFunc, createOrder }}>
             {children}
         </CartContext.Provider>
     )

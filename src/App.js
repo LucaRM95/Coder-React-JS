@@ -13,6 +13,7 @@ function App() {
         <div className="App">
           <Navbar />
           <AppRouter />
+          {/* <Footer /> */}
         </div>
       </Router>
     </CartContextProvider>

@@ -19,6 +19,7 @@ const Navbar = () => {
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div id="nav" className="navbar-nav">
+                            <Link className="nav-link" to="./productos">Productos</Link>
                             <Link className="nav-link" to="./remeras">Remeras</Link>
                             <Link className="nav-link" to="./musculosas">Musculosas</Link>
                             <Link className="nav-link" to="./buzos">Buzos</Link>

@@ -19,6 +19,7 @@ const CartDetail = () => {
 
     const handleClickBuy = () => {
         alert("Tu compra se ha realizado con exito!!");
+        cartContext.createOrder();
         cartContext.clear();
     }
 
@@ -76,7 +77,7 @@ const CartDetail = () => {
                         <p>Total: ${totalPrice}</p>
                     </div>
                     <div className="col-md-8">
-                        <button className="btn btn-success me-5" onClick={handleClickBuy}>Comprar</button>
+                        <button className="btn btn-primary me-5" onClick={handleClickBuy}>Comprar</button>
                         <button className="btn btn-danger" onClick={handleClickClear}>Clear</button>
                     </div>
                 </div>
