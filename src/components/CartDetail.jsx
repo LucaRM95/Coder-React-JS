@@ -25,7 +25,7 @@ const CartDetail = () => {
 
     if(items === null || items.length === 0){
         return (
-            <div className='container'>
+            <div className='container' styles={{height: 40+"rem"}}>
                 <div className="row mt-5">
                     <div className="col-md-12">
                         <h2>No hay productos en el carrito</h2>
@@ -71,7 +71,7 @@ const CartDetail = () => {
                     )
                 })
             }
-            <div className="container">
+            <div className="container mb-5">
                 <div className="row">
                     <div className="col-md-4">
                         <p>Total: ${totalPrice}</p>

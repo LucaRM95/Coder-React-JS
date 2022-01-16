@@ -9,3 +9,18 @@
         font-size: 1.2rem;
     }
 }
+
+footer{
+    color: white;
+    a{
+        color: white;
+        text-decoration: none;
+        &:hover{
+            color: #ccc;
+            transition: 300ms all;
+        }
+    }
+    img{
+        width: 20%;
+    }
+}

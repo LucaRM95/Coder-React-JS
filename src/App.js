@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import AppRouter from './Router/AppRouter';
 //import CartContext from './components/Context/CartContext';
 import CartContextProvider from './components/Context/CartContextProvider';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <div className="App">
           <Navbar />
           <AppRouter />
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </Router>
     </CartContextProvider>

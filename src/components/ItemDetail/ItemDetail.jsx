@@ -12,7 +12,7 @@ const ItemDetail = ({ item }) => {
                 ?
                 <Spinner />
                 :
-                <div className='container-fluid mt-5'>
+                <div className='container-fluid mt-5 mb-5'>
                     <h1>Detalles de producto</h1>
                     <br />
                     <hr />
